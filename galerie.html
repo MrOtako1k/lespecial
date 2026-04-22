@@ -14,7 +14,7 @@
   }
   .page-hero::before {
     content: ''; position: absolute; inset: 0;
-    background: url('https://images.unsplash.com/photo-1561758033-d89a9ad46330?w=1400&q=80') center/cover;
+    background: url('imgs/poster_burger.jpg') center/cover;
     opacity: 0.1;
   }
   .page-hero-content { z-index: 2; }
@@ -151,62 +151,61 @@
 
   <div class="filter-tabs reveal">
     <button class="filter-btn active" onclick="filterGallery('all',this)">Tout</button>
-    <button class="filter-btn" onclick="filterGallery('tacos',this)">Tacos</button>
     <button class="filter-btn" onclick="filterGallery('burger',this)">Burgers</button>
     <button class="filter-btn" onclick="filterGallery('pizza',this)">Pizza</button>
+    <button class="filter-btn" onclick="filterGallery('tacos',this)">Tacos</button>
     <button class="filter-btn" onclick="filterGallery('sandwich',this)">Sandwich</button>
-    <button class="filter-btn" onclick="filterGallery('jus',this)">Jus</button>
+    <button class="filter-btn" onclick="filterGallery('plat',this)">Plats & Gratin</button>
+    <button class="filter-btn" onclick="filterGallery('jus',this)">Jus & Desserts</button>
   </div>
 
   <div class="gallery-grid" id="galleryGrid">
-    <div class="gallery-item reveal" data-cat="tacos" onclick="openLightbox(this,'Tacos Blindé')">
-      <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=600&q=85" alt="Tacos">
-      <div class="gallery-overlay"><div><span class="gallery-cat-tag">Tacos</span><div class="gallery-caption">Tacos Blindé</div></div></div>
-    </div>
-    <div class="gallery-item reveal" data-cat="burger" onclick="openLightbox(this,'Burger Biggy')">
-      <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=600&q=85" alt="Burger">
+
+    <div class="gallery-item reveal" data-cat="burger" data-full="imgs/burger_biggy.jpg" onclick="openLightbox(this,'Burger Biggy — Double Viande')">
+      <img src="imgs/burger_biggy.jpg" alt="Burger Biggy">
       <div class="gallery-overlay"><div><span class="gallery-cat-tag">Burger</span><div class="gallery-caption">Burger Biggy</div></div></div>
     </div>
-    <div class="gallery-item reveal" data-cat="pizza" onclick="openLightbox(this,'Pizza Spécial')">
-      <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600&q=85" alt="Pizza">
-      <div class="gallery-overlay"><div><span class="gallery-cat-tag">Pizza</span><div class="gallery-caption">Pizza Spécial</div></div></div>
+
+    <div class="gallery-item reveal" data-cat="sandwich" data-full="imgs/sandwich.jpg" onclick="openLightbox(this,'Sandwich Maison')">
+      <img src="imgs/sandwich.jpg" alt="Sandwich">
+      <div class="gallery-overlay"><div><span class="gallery-cat-tag">Sandwich</span><div class="gallery-caption">Sandwich Maison</div></div></div>
     </div>
-    <div class="gallery-item reveal" data-cat="tacos" onclick="openLightbox(this,'Tacos Gratiné')">
-      <img src="https://images.unsplash.com/photo-1509722747041-616f39b57569?w=600&q=85" alt="Tacos Gratiné">
-      <div class="gallery-overlay"><div><span class="gallery-cat-tag">Tacos Gratiné</span><div class="gallery-caption">Tacos Gratiné Mixte</div></div></div>
+
+    <div class="gallery-item reveal" data-cat="pizza" data-full="imgs/pizza_special.jpg" onclick="openLightbox(this,'Pizza Le Spécial')">
+      <img src="imgs/pizza_special.jpg" alt="Pizza Spécial">
+      <div class="gallery-overlay"><div><span class="gallery-cat-tag">Pizza</span><div class="gallery-caption">Pizza Le Spécial</div></div></div>
     </div>
-    <div class="gallery-item reveal" data-cat="jus" onclick="openLightbox(this,'Jus ZaaZaa')">
-      <img src="https://images.unsplash.com/photo-1546173159-315724a31696?w=600&q=85" alt="Jus">
-      <div class="gallery-overlay"><div><span class="gallery-cat-tag">Jus</span><div class="gallery-caption">Jus ZaaZaa</div></div></div>
-    </div>
-    <div class="gallery-item reveal" data-cat="burger" onclick="openLightbox(this,'Burger Royale')">
-      <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=85" alt="Burger Royale">
+
+    <div class="gallery-item reveal" data-cat="burger" data-full="imgs/burger_royale.jpg" onclick="openLightbox(this,'Burger Royale')">
+      <img src="imgs/burger_royale.jpg" alt="Burger Royale">
       <div class="gallery-overlay"><div><span class="gallery-cat-tag">Burger</span><div class="gallery-caption">Burger Royale</div></div></div>
     </div>
-    <div class="gallery-item reveal" data-cat="pizza" onclick="openLightbox(this,'Pizza Margherita')">
-      <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=600&q=85" alt="Pizza Margherita">
-      <div class="gallery-overlay"><div><span class="gallery-cat-tag">Pizza</span><div class="gallery-caption">Pizza Margherita</div></div></div>
+
+    <div class="gallery-item reveal" data-cat="burger" data-full="imgs/poster_burger.jpg" onclick="openLightbox(this,'Saveurs Explosives 🔥')">
+      <img src="imgs/poster_burger.jpg" alt="Le Spécial Burger">
+      <div class="gallery-overlay"><div><span class="gallery-cat-tag">Le Spécial</span><div class="gallery-caption">Saveurs Explosives</div></div></div>
     </div>
-    <div class="gallery-item reveal" data-cat="sandwich" onclick="openLightbox(this,'Sandwich Doppio')">
-      <img src="https://images.unsplash.com/photo-1539252554453-80ab65ce3586?w=600&q=85" alt="Sandwich">
-      <div class="gallery-overlay"><div><span class="gallery-cat-tag">Sandwich</span><div class="gallery-caption">Sandwich Doppio</div></div></div>
+
+    <div class="gallery-item reveal" data-cat="plat" data-full="imgs/plat_mixte.jpg" onclick="openLightbox(this,'Plat Mixte — الراعي الرسمي للبرد 😋')">
+      <img src="imgs/plat_mixte.jpg" alt="Plat Mixte">
+      <div class="gallery-overlay"><div><span class="gallery-cat-tag">Plats</span><div class="gallery-caption">Plat Mixte</div></div></div>
     </div>
-    <div class="gallery-item reveal" data-cat="jus" onclick="openLightbox(this,'Jus Avocat')">
-      <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=600&q=85" alt="Jus Avocat">
-      <div class="gallery-overlay"><div><span class="gallery-cat-tag">Jus</span><div class="gallery-caption">Jus Avocat</div></div></div>
+
+    <div class="gallery-item reveal" data-cat="jus" data-full="imgs/zaazaa_dessert.jpg" onclick="openLightbox(this,'ZaaZaa — دوا البرد 😍')">
+      <img src="imgs/zaazaa_dessert.jpg" alt="ZaaZaa Dessert">
+      <div class="gallery-overlay"><div><span class="gallery-cat-tag">Jus & Desserts</span><div class="gallery-caption">ZaaZaa — 25 DH</div></div></div>
     </div>
-    <div class="gallery-item reveal" data-cat="tacos" onclick="openLightbox(this,'Tacos Chicken')">
-      <img src="https://images.unsplash.com/photo-1553909489-cd47e0ef937f?w=600&q=85" alt="Tacos Chicken">
-      <div class="gallery-overlay"><div><span class="gallery-cat-tag">Tacos</span><div class="gallery-caption">Tacos Tchiken</div></div></div>
+
+    <div class="gallery-item reveal" data-cat="tacos" data-full="imgs/tacos_blinde.jpg" onclick="openLightbox(this,'Tacos Blindé — Le Plus Grand!')">
+      <img src="imgs/tacos_blinde.jpg" alt="Tacos Blindé">
+      <div class="gallery-overlay"><div><span class="gallery-cat-tag">Tacos</span><div class="gallery-caption">Tacos Blindé</div></div></div>
     </div>
-    <div class="gallery-item reveal" data-cat="pizza" onclick="openLightbox(this,'Pizza Végétarienne')">
-      <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=85" alt="Pizza Véget">
-      <div class="gallery-overlay"><div><span class="gallery-cat-tag">Pizza</span><div class="gallery-caption">Pizza Végétarienne</div></div></div>
+
+    <div class="gallery-item reveal" data-cat="plat" data-full="imgs/gratin_fruits.jpg" onclick="openLightbox(this,'Gratin Fruits de Mer')">
+      <img src="imgs/gratin_fruits.jpg" alt="Gratin Fruits de Mer">
+      <div class="gallery-overlay"><div><span class="gallery-cat-tag">Gratin</span><div class="gallery-caption">Gratin Fruits de Mer</div></div></div>
     </div>
-    <div class="gallery-item reveal" data-cat="sandwich" onclick="openLightbox(this,'Sandwich Spécial')">
-      <img src="https://images.unsplash.com/photo-1481070414801-51fd732d7184?w=600&q=85" alt="Panini">
-      <div class="gallery-overlay"><div><span class="gallery-cat-tag">Sandwich</span><div class="gallery-caption">Panini Spécial</div></div></div>
-    </div>
+
   </div>
 </section>
 
@@ -243,8 +242,9 @@
     });
   }
   function openLightbox(el, caption) {
-    const img = el.querySelector('img');
-    document.getElementById('lightboxImg').src = img.src.replace('w=600','w=1200');
+    // Use data-full if available, otherwise fall back to img src
+    const fullSrc = el.dataset.full || el.querySelector('img').src;
+    document.getElementById('lightboxImg').src = fullSrc;
     document.getElementById('lightboxCaption').textContent = caption;
     document.getElementById('lightbox').classList.add('open');
     document.body.style.overflow = 'hidden';
